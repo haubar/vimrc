@@ -2,7 +2,6 @@
  "All Required
  if has('vim_starting')
    set nocompatible               " Be iMproved
-
    set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
@@ -15,7 +14,7 @@
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
 "----------------------------
- call neobundle#end()
+ NeoBundle 'Shougo/vimproc'
 
  " Required:
  filetype plugin indent on
