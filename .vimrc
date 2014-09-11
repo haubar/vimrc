@@ -78,20 +78,20 @@ hi IndentGuidesEven guibg=green ctermbg=236
 let g:indentLine_color_term = 239
 let g:indentLine_char = '｜'
 
-nnoremap <F1> :CurrentLineWhitespaceOn<CR>
+nnoremap <F2> :CurrentLineWhitespaceOn<CR>
 
-nmap <CR> :call FoldFocus('e')<CR>
-nmap <Leader><CR> :call FoldFocus('vnew')<CR>
+nmap <F3> :call FoldFocus('e')<CR>
+nmap <Leader><F3> :call FoldFocus('vnew')<CR>
 
 "--------------------------------------------------
 
 NeoBundle 'ScrollColors'
 
 " keybinding: ,cn - Scroll next colorscheme
-nmap <localleader>cn :NEXTCOLOR<CR>
+nmap <C-n> :NEXTCOLOR<CR>
 
 " keybinding: ,cp - Scroll previous colorscheme
-nmap <localleader>cp :PREVCOLOR<CR>
+nmap <C-p> :PREVCOLOR<CR>
 
 "---------------------------------------------------
 
@@ -102,5 +102,3 @@ nmap <localleader>cp :PREVCOLOR<CR>
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
  NeoBundleCheck
-
-
