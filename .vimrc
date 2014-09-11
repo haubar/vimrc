@@ -16,6 +16,36 @@
 "----------------------------
  NeoBundle 'Shougo/vimproc'
 
+
+
+
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'arnaud-lb/vim-php-namespace'
+NeoBundle 'elzr/vim-json'
+
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  " Required:
  filetype plugin indent on
 
