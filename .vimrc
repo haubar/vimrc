@@ -62,8 +62,9 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'vasconcelloslf/vim-foldfocus'
 
-
-nnoremap <F1> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+nnoremap <F1>:NERDTreeToggle<CR>
 
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
@@ -74,6 +75,13 @@ let g:indent_guides_enable_on_vim_startup = 0
 hi IndentGuidesOdd  guibg=red   ctermbg=236
 hi IndentGuidesEven guibg=green ctermbg=236
 
+let g:indentLine_color_term = 239
+let g:indentLine_char = '｜'
+
+nnoremap <F1>:CurrentLineWhitespaceOn<CR>
+
+nmap <CR>:call FoldFocus('e')<CR>
+nmap <Leader><CR>:call FoldFocus('vnew')<CR>
 
 "--------------------------------------------------
 
