@@ -19,7 +19,7 @@
 
 
 
-NeoBundle 'nathanaelkane/vim-indent-guides'
+
 NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'arnaud-lb/vim-php-namespace'
 NeoBundle 'elzr/vim-json'
@@ -31,7 +31,8 @@ NeoBundle 'Shougo/neosnippet'
 
 
 
-
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'vasconcelloslf/vim-foldfocus'
 
 
 
