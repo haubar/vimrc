@@ -24,6 +24,7 @@ NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'arnaud-lb/vim-php-namespace'
 NeoBundle 'elzr/vim-json'
 
+
 "Complection
 NeoBundle 'Shougo/neocomplcache'
 "Snippet
@@ -57,8 +58,10 @@ set expandtab
 
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'vasconcelloslf/vim-foldfocus'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'vasconcelloslf/vim-foldfocus'
+
 
 nnoremap <F1> :NERDTreeToggle<CR>
 
@@ -66,14 +69,23 @@ let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 
-" Autorun to setting
 let g:indent_guides_enable_on_vim_startup = 0
 
 hi IndentGuidesOdd  guibg=red   ctermbg=236
 hi IndentGuidesEven guibg=green ctermbg=236
 
+
 "--------------------------------------------------
 
+NeoBundle 'ScrollColors'
+
+" keybinding: ,cn - Scroll next colorscheme
+nmap <localleader>cn :NEXTCOLOR<CR>
+
+" keybinding: ,cp - Scroll previous colorscheme
+nmap <localleader>cp :PREVCOLOR<CR>
+
+"---------------------------------------------------
 
 
  " Required:
