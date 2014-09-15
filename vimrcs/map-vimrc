@@ -1,32 +1,31 @@
+"---------NERDTree setting-----------------
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nnoremap <F1> :NERDTreeToggle<CR>
 
+"-----------indent guides setting----------
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
-
-let g:indent_guides_enable_on_vim_startup = 0
-
+let g:indent_guides_enable_on_vim_startup = 1
 hi IndentGuidesOdd  guibg=red   ctermbg=236
 hi IndentGuidesEven guibg=green ctermbg=236
 
+"-------------indent line-------------------
 let g:indentLine_color_term = 239
 let g:indentLine_char = '｜'
 
+"--------------better white-----------------
 nnoremap <F2> :CurrentLineWhitespaceOn<CR>
+nnoremap <F3> :StripWhitespace<CR>
 
-nmap <F3> :call FoldFocus('e')<CR>
-nmap <Leader><F3> :call FoldFocus('vnew')<CR>
+"--------------vim foldfocus-----------------
+nmap <C-a>:call FoldFocus('e')<CR>
+nmap <Leader><C-z>:call FoldFocus('vnew')<CR>
 
-"--------------------------------------------------
-
-NeoBundle 'ScrollColors'
-
-" keybinding: ,cn - Scroll next colorscheme
-nmap <C-n> :NEXTCOLOR<CR>
-
-" keybinding: ,cp - Scroll previous colorscheme
-nmap <C-p> :PREVCOLOR<CR>
-
+"---------------scrollcolors-------------------
+ "keybinding: ,cn - Scroll next colorscheme
+ nmap <C-n> :NEXTCOLOR<CR>
+ "keybinding: ,cp - Scroll previous colorscheme
+ nmap <C-p> :PREVCOLOR<CR>
 "---------------------------------------------------
