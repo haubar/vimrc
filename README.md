@@ -1,4 +1,4 @@
 vimrc
 =============================================
 
-Vim Setting   ZZZZZZZ
+Vim Setting
