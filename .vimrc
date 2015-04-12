@@ -25,7 +25,7 @@ set encoding=utf-8
 syntax on
 set ffs=unix,dos,mac
 set cursorline
-set nu
+"set nu
 set ru
 set ic
 set ai
