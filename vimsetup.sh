@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+#Installs vim from my github
+
 VIMHOME=~/.vim
 
 warn() {
@@ -10,15 +13,22 @@ die() {
     exit 1
 }
 
-[ -e "$VIMHOME/vimrc" ] && die "$VIMHOME/vimrc already exists."
-[ -e "~/.vim" ] && die "~/.vim already exists."
+[ -e "$VIMHOME" ] && die "$VIMHOME already exists."
+
 [ -e "~/.vimrc" ] && die "~/.vimrc already exists."
 
 git clone git://github.com/haubar/vimrc.git "$VIMHOME"
+
 cd "$VIMHOME"
+
 git submodule update --init
 
 cd ~
+
 ln -s .vim/.vimrc .vimrc
 
-echo "Your VIM configuration has been installed."
+echo "VIM config installed !!!"
+
+
+
+
