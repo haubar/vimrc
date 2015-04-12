@@ -23,6 +23,8 @@ cd "$VIMHOME"
 
 git submodule update --init
 
+git pull VIMHOME  origin master
+
 cd ~
 
 ln -s .vim/.vimrc .vimrc
