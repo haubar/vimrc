@@ -12,7 +12,8 @@
 
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
- "NeoBundle 'Shougo/vimproc'
+ NeoBundle 'Shougo/vimproc'
+
 
 
 "Base Setting
@@ -65,6 +66,9 @@ elseif (has("unix") || has("mac"))
   source ~/.vim/vimrcs/tool-vimrc
   source ~/.vim/vimrcs/map-vimrc
 endif
+
+" 存檔時移除多的空白區塊
+autocmd BufWritePre * :%s/\s\+$//e
 
  " Required:
  filetype plugin indent on
