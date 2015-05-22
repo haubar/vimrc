@@ -18,10 +18,11 @@ nnoremap <F4> :IndentLinesToggle<CR>
 "--------------better white-----------------
 nnoremap <F2> :CurrentLineWhitespaceOn<CR>
 nnoremap <F3> :StripWhitespace<CR>
+nnoremap <F5> :ToggleWhitespace<CR>
 
 "--------------vim foldfocus-----------------
-nmap <C-a>:call FoldFocus('e')<CR>
-nmap <Leader><C-z>:call FoldFocus('vnew')<CR>
+nmap <C-a> :call FoldFocus('e')<CR>
+nmap <Leader><C-z> :call FoldFocus('vnew')<CR>
 
 "---------------scrollcolors-------------------
  "keybinding: ,cn - Scroll next colorscheme
