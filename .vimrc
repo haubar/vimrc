@@ -14,6 +14,14 @@
  " Note: You don't set neobundle setting in .gvimrc!
  NeoBundle 'Shougo/vimproc'
 
+"判定目前系統類型, 決定載入的檔案方式
+if(has("win32") || has("win95") || has("win64") || has("win16"))
+  source $vim/vimrcs/tool-vimrc
+  source $vim/vimrcs/map-vimrc
+elseif (has("unix") || has("mac"))
+  source ~/.vim/vimrcs/tool-vimrc
+  source ~/.vim/vimrcs/map-vimrc
+endif
 
 
 "Base Setting
@@ -58,14 +66,7 @@ highlight StatusLine term=bold,reverse cterm=bold,reverse    "設定狀態列
 
 "------------------------------------
 
-"判定目前系統類型, 決定載入的檔案方式
-if(has("win32") || has("win95") || has("win64") || has("win16"))
-  source $vim/vimrcs/tool-vimrc
-  source $vim/vimrcs/map-vimrc
-elseif (has("unix") || has("mac"))
-  source ~/.vim/vimrcs/tool-vimrc
-  source ~/.vim/vimrcs/map-vimrc
-endif
+
 
 " 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
