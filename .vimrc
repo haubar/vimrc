@@ -14,28 +14,10 @@
  " Note: You don't set neobundle setting in .gvimrc!
  NeoBundle 'Shougo/vimproc'
 
-"判定目前系統類型, 決定載入的檔案方式
-if(has("win32") || has("win95") || has("win64") || has("win16"))
-  source $vim/vimrcs/tool-vimrc
-  source $vim/vimrcs/map-vimrc
-elseif (has("unix") || has("mac"))
-  source ~/.vim/vimrcs/tool-vimrc
-  source ~/.vim/vimrcs/map-vimrc
-endif
-
 "--------------plug setting----------------------"
 
 "php.vim
-g:php_syntax_extensions_enabled
-
-
-
-"vim-php-namespace
-inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
-
-inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
-noremap <Leader>e :call PhpExpandClass()<CR>
+let g:php_syntax_extensions_enabled
 
 "vim-json
 let g:indentLine_noConcealCursor=""
@@ -105,6 +87,15 @@ highlight StatusLine term=bold,reverse cterm=bold,reverse    "設定狀態列
 
 " 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
+
+"判定目前系統類型, 決定載入的檔案方式
+if(has("win32") || has("win95") || has("win64") || has("win16"))
+  source $vim/vimrcs/tool-vimrc
+  source $vim/vimrcs/map-vimrc
+elseif (has("unix") || has("mac"))
+  source ~/.vim/vimrcs/tool-vimrc
+  source ~/.vim/vimrcs/map-vimrc
+endif
 
  " Required:
  filetype plugin indent on
