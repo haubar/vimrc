@@ -14,7 +14,7 @@ nnoremap <F1> :NERDTreeToggle<CR>
 "-------------indent line-------------------
 "let g:indentLine_color_term = 239
 "let g:indentLine_char = '｜'
-nnoremap <F1> :IndentLinesToggle<CR>
+nnoremap <F4> :IndentLinesToggle<CR>
 "--------------better white-----------------
 nnoremap <F2> :CurrentLineWhitespaceOn<CR>
 nnoremap <F3> :StripWhitespace<CR>
