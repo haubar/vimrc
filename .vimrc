@@ -2,6 +2,7 @@
  "All Required
  if has('vim_starting')
    set nocompatible               " Be iMproved
+   filetype off
    set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
@@ -35,7 +36,7 @@ NeoBundle 'vasconcelloslf/vim-foldfocus'
 NeoBundle 'ScrollColors'
 NeoBundle 'bling/vim-airline'
 
-call neobundle#end()
+ call neobundle#end()
 
 
 "--------------plug setting----------------------"
