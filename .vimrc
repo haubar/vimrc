@@ -125,7 +125,7 @@ set shiftwidth=2
 set smarttab
 set expandtab
 
-set guifont=Consolas:h14  " 設定字體樣式及大小。
+set guifont=Monaco:h14  " 設定字體樣式及大小。
 
 colorscheme torte
 
