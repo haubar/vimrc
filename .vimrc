@@ -35,7 +35,7 @@ NeoBundle 'vasconcelloslf/vim-foldfocus'
 NeoBundle 'ScrollColors'
 NeoBundle 'bling/vim-airline'
 
- call neobundle#end()
+ "call neobundle#end()
 
 
 "--------------plug setting----------------------"
