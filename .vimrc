@@ -23,6 +23,41 @@ elseif (has("unix") || has("mac"))
   source ~/.vim/vimrcs/map-vimrc
 endif
 
+"--------------plug setting----------------------"
+
+"php.vim
+g:php_syntax_extensions_enabled
+
+
+
+"vim-php-namespace
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+
+inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+noremap <Leader>e :call PhpExpandClass()<CR>
+
+"vim-json
+let g:indentLine_noConcealCursor=""
+
+"neocomplcache.vim
+let g:neocomplcache_enable_at_startup = 1
+
+"neosnippet.vim
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet'
+
+"vim-indent-guides
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
+"indentLine
+let g:indentLine_char = 'c'
+let g:indentLine_color_term = 239
+
 
 "Base Setting
 set nobackup
@@ -77,3 +112,14 @@ autocmd BufWritePre * :%s/\s\+$//e
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
  NeoBundleCheck
+
+"php.vim highlight setting
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
