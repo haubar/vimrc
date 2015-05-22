@@ -2,7 +2,6 @@
  "All Required
  if has('vim_starting')
    set nocompatible               " Be iMproved
-   filetype off
    set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
