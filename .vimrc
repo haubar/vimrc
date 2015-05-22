@@ -27,7 +27,7 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 
 "Tool Package
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ntpeters/vim-better-whitespace'
@@ -48,10 +48,9 @@ let g:indentLine_noConcealCursor=""
 "---------neocomplcache.vim---------------
 let g:neocomplcache_enable_at_startup = 1
 
-"---------NERDTree setting-----------------
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-nnoremap <F1> :NERDTreeToggle<CR>
+"---------NERDTreeTabs setting-----------------
+let g:nerdtree_tabs_open_on_console_startup=1
+nnoremap <F1> :NERDTreeTabsToggle<CR>
 
 "---------neosnippet.vim------------------
 " Enable snipMate compatibility feature.
