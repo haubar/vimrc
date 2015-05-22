@@ -1,19 +1,37 @@
+
+"---------php.vim-------------------------
+let g:php_syntax_extensions_enabled
+
+"---------vim-json------------------------
+let g:indentLine_noConcealCursor=""
+
+"---------neocomplcache.vim---------------
+let g:neocomplcache_enable_at_startup = 1
+
 "---------NERDTree setting-----------------
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nnoremap <F1> :NERDTreeToggle<CR>
 
-"-----------indent guides setting----------
-"let g:indent_guides_auto_colors = 0
-"let g:indent_guides_guide_size = 1
-"let g:indent_guides_start_level = 2
-"let g:indent_guides_enable_on_vim_startup = 1
+"---------neosnippet.vim------------------
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet'
+
+"----------vim-indent-guides--------------
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
 "hi IndentGuidesOdd  guibg=red   ctermbg=236
 "hi IndentGuidesEven guibg=green ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 "-------------indent line-------------------
-"let g:indentLine_color_term = 239
-"let g:indentLine_char = '｜'
+let g:indentLine_color_term = 239
+let g:indentLine_char = '｜'
 nnoremap <F4> :IndentLinesToggle<CR>
 "--------------better white-----------------
 nnoremap <F2> :CurrentLineWhitespaceOn<CR>
@@ -29,4 +47,15 @@ nmap <Leader><C-z> :call FoldFocus('vnew')<CR>
  nmap <C-n> :NEXTCOLOR<CR>
  "keybinding: ,cp - Scroll previous colorscheme
  nmap <C-p> :PREVCOLOR<CR>
+
+"---------------vim-airline-------------------
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 "---------------------------------------------------
+
+
+
+
+
