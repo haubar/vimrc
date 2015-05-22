@@ -6,14 +6,13 @@
  endif
 
 
- call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
- " Let NeoBundle manage NeoBundle
- NeoBundleFetch 'Shougo/neobundle.vim'
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
 
- " Refer to |:NeoBundle-examples|.
- " Note: You don't set neobundle setting in .gvimrc!
- NeoBundle 'Shougo/vimproc'
+
+NeoBundle 'Shougo/vimproc.vim'
 
 "Language Syntax
 NeoBundle 'StanAngeloff/php.vim'
@@ -35,7 +34,7 @@ NeoBundle 'vasconcelloslf/vim-foldfocus'
 NeoBundle 'ScrollColors'
 NeoBundle 'bling/vim-airline'
 
- "call neobundle#end()
+call neobundle#end()
 
 
 "--------------plug setting----------------------"
