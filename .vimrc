@@ -14,6 +14,28 @@
  " Note: You don't set neobundle setting in .gvimrc!
  NeoBundle 'Shougo/vimproc'
 
+"Language Syntax
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'arnaud-lb/vim-php-namespace'
+NeoBundle 'elzr/vim-json'
+
+"Complection
+NeoBundle 'Shougo/neocomplcache'
+
+"Snippet
+NeoBundle 'Shougo/neosnippet'
+
+"Tool Package
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'vasconcelloslf/vim-foldfocus'
+NeoBundle 'ScrollColors'
+NeoBundle 'bling/vim-airline'
+
+
+
 "--------------plug setting----------------------"
 
 "php.vim
@@ -36,9 +58,11 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
-"indentLine
-let g:indentLine_char = 'c'
-let g:indentLine_color_term = 239
+
+"vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 
 "Base Setting
