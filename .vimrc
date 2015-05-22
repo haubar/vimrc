@@ -5,6 +5,7 @@
    set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
+
  call neobundle#begin(expand('~/.vim/bundle/'))
 
  " Let NeoBundle manage NeoBundle
@@ -38,38 +39,67 @@ NeoBundle 'bling/vim-airline'
 
 "--------------plug setting----------------------"
 
-"php.vim
+"---------php.vim-------------------------
 let g:php_syntax_extensions_enabled
 
-"vim-json
+"---------vim-json------------------------
 let g:indentLine_noConcealCursor=""
 
-"neocomplcache.vim
+"---------neocomplcache.vim---------------
 let g:neocomplcache_enable_at_startup = 1
 
-"neosnippet.vim
+"---------NERDTree setting-----------------
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+nnoremap <F1> :NERDTreeToggle<CR>
+
+"---------neosnippet.vim------------------
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet'
 
-"vim-indent-guides
+"----------vim-indent-guides--------------
 let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
+"hi IndentGuidesOdd  guibg=red   ctermbg=236
+"hi IndentGuidesEven guibg=green ctermbg=236
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
+"-------------indent line-------------------
+let g:indentLine_color_term = 239
+let g:indentLine_char = '｜'
+nnoremap <F4> :IndentLinesToggle<CR>
+"--------------better white-----------------
+nnoremap <F2> :CurrentLineWhitespaceOn<CR>
+nnoremap <F3> :StripWhitespace<CR>
+nnoremap <F5> :ToggleWhitespace<CR>
 
-"vim-airline
+"--------------vim foldfocus-----------------
+nmap <C-a> :call FoldFocus('e')<CR>
+nmap <Leader><C-z> :call FoldFocus('vnew')<CR>
+
+"---------------scrollcolors-------------------
+ "keybinding: ,cn - Scroll next colorscheme
+ nmap <C-n> :NEXTCOLOR<CR>
+ "keybinding: ,cp - Scroll previous colorscheme
+ nmap <C-p> :PREVCOLOR<CR>
+
+"---------------vim-airline-------------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"---------------------------------------------------
 
 
 "Base Setting
 set nobackup
 set nocompatible
 set encoding=utf-8
-
 
 "View Setting
 syntax on
@@ -96,8 +126,6 @@ set shiftwidth=2
 set smarttab
 set expandtab
 
-
-
 set guifont=Consolas:h14  " 設定字體樣式及大小。
 
 colorscheme torte
@@ -105,14 +133,12 @@ colorscheme torte
 set statusline=%{GitBranchInfoString()}%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y   "設定狀態列
 highlight StatusLine term=bold,reverse cterm=bold,reverse    "設定狀態列
 
-"------------------------------------
-
-
-
 " 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
 
-"判定目前系統類型, 決定載入的檔案方式
+"------------------------------------
+
+"判定目前系統類型, 決定載入的檔案方式 ....目前無效果Orz
 if(has("win32") || has("win95") || has("win64") || has("win16"))
   source $vim/vimrcs/tool-vimrc
   source $vim/vimrcs/map-vimrc
@@ -121,12 +147,15 @@ elseif (has("unix") || has("mac"))
   source ~/.vim/vimrcs/map-vimrc
 endif
 
+
+
  " Required:
  filetype plugin indent on
 
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
  NeoBundleCheck
+
 
 "php.vim highlight setting
 function! PhpSyntaxOverride()
