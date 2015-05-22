@@ -40,7 +40,7 @@ NeoBundle 'bling/vim-airline'
 "--------------plug setting----------------------"
 
 "---------php.vim-------------------------
-let g:php_syntax_extensions_enabled
+"let g:php_syntax_extensions_enabled
 
 "---------vim-json------------------------
 let g:indentLine_noConcealCursor=""
@@ -142,8 +142,8 @@ if(has("win32") || has("win95") || has("win64") || has("win16"))
   source $vim/vimrcs/tool-vimrc
   source $vim/vimrcs/map-vimrc
 elseif (has("unix") || has("mac"))
-  source ~/.vim/vimrcs/tool-vimrc
-  source ~/.vim/vimrcs/map-vimrc
+  "source ~/.vim/vimrcs/tool-vimrc
+  "source ~/.vim/vimrcs/map-vimrc
 endif
 
 
