@@ -19,7 +19,7 @@ NeoBundle 'Shougo/vimproc.vim', {
      'mac' : 'make -f make_mac.mak',
      'linux' : 'make',
      'unix' : 'gmake'
-    },
+    }
  }
 
 "Language Syntax
