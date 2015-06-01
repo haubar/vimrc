@@ -91,8 +91,7 @@ nnoremap <F2> :CurrentLineWhitespaceOn<CR>
 nnoremap <F3> :StripWhitespace<CR>
 nnoremap <F5> :ToggleWhitespace<CR>
 
-"--------------------------------------------
-
+"----------------syntastic-------------------
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -100,7 +99,7 @@ let g:syntastic_check_on_wq = 0
 
 "--------------vim foldfocus-----------------
 nmap <C-a> :call FoldFocus('e')<CR>
-nmap <Leader><C-z> :call FoldFocus('vnew')<CR>
+nmap <C-z> :call FoldFocus('vnew')<CR>
 
 "---------------scrollcolors-------------------
  "keybinding: ,cn - Scroll next colorscheme
