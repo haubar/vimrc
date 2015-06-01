@@ -14,7 +14,6 @@ die() {
 }
 
 
-git clone git://github.com/haubar/vimrc.git "$VIMHOME"
 
 cd "$VIMHOME"
 
