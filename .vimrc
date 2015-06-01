@@ -133,7 +133,7 @@ set smartindent
 set history=50
 set showcmd
 set showmatch
-set cmdheight=5
+set cmdheight=2
 set backspace=2
 set tabstop=2
 set shiftwidth=2
