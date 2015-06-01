@@ -23,6 +23,7 @@ NeoBundle 'Shougo/vimproc.vim', {
  }
 
 "Language Syntax
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'arnaud-lb/vim-php-namespace'
 NeoBundle 'elzr/vim-json'
