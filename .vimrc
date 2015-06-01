@@ -38,7 +38,6 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'vasconcelloslf/vim-foldfocus'
-NeoBundle 'ScrollColors'
 NeoBundle 'Lokaltog/vim-powerline
 
 "Scheme
@@ -75,8 +74,8 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 1
 "hi IndentGuidesOdd  guibg=red   ctermbg=236
 "hi IndentGuidesEven guibg=green ctermbg=236
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 "-------------indent line-------------------
 let g:indentLine_color_term = 239
