@@ -10,7 +10,16 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc.vim'
+
+NeoBundle 'Shougo/vimproc.vim', {
+ 'build' : {
+     'windows' : 'tools\\update-dll-mingw',
+     'cygwin' : 'make -f make_cygwin.mak',
+     'mac' : 'make -f make_mac.mak',
+     'linux' : 'make',
+     'unix' : 'gmake',
+    },
+ }
 
 "Language Syntax
 NeoBundle 'scrooloose/syntastic'
@@ -18,11 +27,10 @@ NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'arnaud-lb/vim-php-namespace'
 NeoBundle 'elzr/vim-json'
 
-"Complection
-NeoBundle 'Shougo/neocomplcache'
-
-"Snippet
+"Complection & Snippet
+NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 "Tool Package
 NeoBundle 'jistr/vim-nerdtree-tabs'
@@ -31,7 +39,7 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'vasconcelloslf/vim-foldfocus'
 NeoBundle 'ScrollColors'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'Lokaltog/vim-powerline
 
 "Scheme
 NeoBundle 'tomasr/molokai'
@@ -42,7 +50,6 @@ call neobundle#end()
 
 
 "--------------plug setting----------------------"
-
 "---------php.vim-------------------------
 "let g:php_syntax_extensions_enabled
 
@@ -97,10 +104,8 @@ nmap <C-z> :call FoldFocus('vnew')<CR>
  "keybinding: ,cp - Scroll previous colorscheme
  nmap <C-p> :PREVCOLOR<CR>
 
-"---------------vim-airline-------------------
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+"---------------vim-powerline-------------------
+ let g:Powerline_symbols = 'fancy'
 
 "----------------scheme------------------------
 let g:molokai_original = 1
