@@ -15,7 +15,7 @@ die() {
 
 
 
-cd "$VIMHOME"
+cd VIMHOME
 
 git submodule update --init
 
