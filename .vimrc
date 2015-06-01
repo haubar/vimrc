@@ -113,7 +113,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 "----------------scheme------------------------
-"let g:molokai_original = 1
+let g:molokai_original = 1
 
 
 
