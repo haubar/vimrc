@@ -147,9 +147,9 @@ colorscheme molokai
 set statusline=%{GitBranchInfoString()}%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y   "設定狀態列
 highlight StatusLine term=bold,reverse cterm=bold,reverse    "設定狀態列
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 " 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
