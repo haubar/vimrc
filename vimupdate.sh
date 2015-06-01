@@ -15,11 +15,11 @@ die() {
 
 
 
-cd VIMHOME
+cd "$VIMHOME"
 
-git submodule update --init
+#git submodule update --init
 
-git pull VIMHOME  origin master
+git pull origin master
 
 cd ~
 
