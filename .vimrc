@@ -18,7 +18,7 @@ NeoBundle 'Shougo/vimproc.vim', {
      'cygwin' : 'make -f make_cygwin.mak',
      'mac' : 'make -f make_mac.mak',
      'linux' : 'make',
-     'unix' : 'gmake',
+     'unix' : 'gmake'
     },
  }
 
@@ -42,6 +42,11 @@ NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'vasconcelloslf/vim-foldfocus'
 NeoBundle 'ScrollColors'
 NeoBundle 'bling/vim-airline'
+
+"Scheme
+NeoBundle 'tomasr/molokai'
+
+
 
 call neobundle#end()
 
@@ -101,8 +106,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-"---------------------------------------------------
-
+"----------------scheme------------------------
+let g:molokai_original = 1
 
 "Base Setting
 set nobackup
