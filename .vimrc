@@ -91,6 +91,13 @@ nnoremap <F2> :CurrentLineWhitespaceOn<CR>
 nnoremap <F3> :StripWhitespace<CR>
 nnoremap <F5> :ToggleWhitespace<CR>
 
+"--------------------------------------------
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 "--------------vim foldfocus-----------------
 nmap <C-a> :call FoldFocus('e')<CR>
 nmap <Leader><C-z> :call FoldFocus('vnew')<CR>
@@ -107,7 +114,9 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 "----------------scheme------------------------
-let g:molokai_original = 1
+"let g:molokai_original = 1
+
+
 
 "Base Setting
 set nobackup
@@ -141,10 +150,14 @@ set expandtab
 
 set guifont=Monaco:h14  " 設定字體樣式及大小。
 
-colorscheme torte
+"colorscheme torte
 
 set statusline=%{GitBranchInfoString()}%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y   "設定狀態列
 highlight StatusLine term=bold,reverse cterm=bold,reverse    "設定狀態列
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
