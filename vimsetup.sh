@@ -28,6 +28,8 @@ git pull VIMHOME  origin master
 cd ~
 
 ln -s .vim/.vimrc .vimrc
+ln -s .vim/.vimrcs/map-vimrc vimrcs/map-vimrc
+ln -s .vim/.vimrcs/tool-vimrc vimrcs/tool-vimrc
 
 echo "VIM config installed !!!"
 
