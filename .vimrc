@@ -160,7 +160,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 if(has("win32") || has("win95") || has("win64") || has("win16"))
   source $vim/vimrcs/tool-vimrc
   source $vim/vimrcs/map-vimrc
-elseif (has("unix") || has("mac"))
+elseif (has("unix") || has("macunix"))
   "source ~/.vim/vimrcs/tool-vimrc
   "source ~/.vim/vimrcs/map-vimrc
 endif
