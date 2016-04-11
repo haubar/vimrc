@@ -1,19 +1,19 @@
 "Language Syntax
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'arnaud-lb/vim-php-namespace'
 NeoBundle 'elzr/vim-json'
 
 "Complection
 NeoBundle 'Shougo/neocomplcache'
-
-"Snippet
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 "Tool Package
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'vasconcelloslf/vim-foldfocus'
-NeoBundle 'ScrollColors'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'Lokaltog/vim-powerline'
