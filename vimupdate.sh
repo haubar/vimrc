@@ -17,7 +17,5 @@ echo "WOW~ VIM config updated !!!"
 cd ~
 
 ln -s $VIMHOME/.vimrc .vimrc
-ln -s $VIMHOME/vimrcs/map-vimrc .map-vimrc
-ln -s $VIMHOME/vimrcs/tool-vimrc .tool-vimrc
 
 echo "WOW~ VIM config Link success !!!"
