@@ -1,6 +1,6 @@
 
 "---------php.vim-------------------------
-let g:php_syntax_extensions_enabled
+"let g:php_syntax_extensions_enabled
 
 "---------vim-json------------------------
 let g:indentLine_noConcealCursor=""
@@ -25,8 +25,8 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 1
 "hi IndentGuidesOdd  guibg=red   ctermbg=236
 "hi IndentGuidesEven guibg=green ctermbg=236
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 "-------------indent line-------------------
 let g:indentLine_color_term = 239
@@ -37,15 +37,15 @@ nnoremap <F2> :CurrentLineWhitespaceOn<CR>
 nnoremap <F3> :StripWhitespace<CR>
 nnoremap <F5> :ToggleWhitespace<CR>
 
+"----------------syntastic-------------------
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 "--------------vim foldfocus-----------------
 nmap <C-a> :call FoldFocus('e')<CR>
-nmap <Leader><C-z> :call FoldFocus('vnew')<CR>
-
-"---------------scrollcolors-------------------
- "keybinding: ,cn - Scroll next colorscheme
- nmap <C-n> :NEXTCOLOR<CR>
- "keybinding: ,cp - Scroll previous colorscheme
- nmap <C-p> :PREVCOLOR<CR>
+nmap <C-z> :call FoldFocus('vnew')<CR>
 
 "---------------vim-airline-------------------
 let g:airline#extensions#tabline#enabled = 1
@@ -54,7 +54,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 "---------------------------------------------------
 
-
-
+"---------------vim-powerline-------------------
+ let g:Powerline_symbols = 'fancy'
 
 
