@@ -5,7 +5,7 @@ NeoBundle 'arnaud-lb/vim-php-namespace'
 NeoBundle 'elzr/vim-json'
 
 "Complection
-NeoBundle 'Shougo/neocomplcache'
+"NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 
