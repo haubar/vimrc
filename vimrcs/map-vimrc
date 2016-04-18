@@ -3,7 +3,7 @@
 "let g:php_syntax_extensions_enabled
 
 "---------vim-json------------------------
-let g:indentLine_noConcealCursor=""
+"let g:indentLine_noConcealCursor=""
 
 "---------neocomplcache.vim---------------
 let g:neocomplcache_enable_at_startup = 1
