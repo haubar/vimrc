@@ -1,31 +1,21 @@
- "----------------------------
- "All Required
  if has('vim_starting')
-   set nocompatible               " Be iMproved
+   set nocompatible
    set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
-
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"Scheme
 NeoBundle 'tomasr/molokai'
-
+colorscheme molokai
 
 call neobundle#end()
 
-"----------------scheme------------------------
-"let g:molokai_original = 1
-
-"Base Setting
 set nobackup
 set nocompatible
 set encoding=utf-8
 
-"View Setting
 syntax on
 set ffs=unix,dos,mac
 set cursorline
@@ -50,17 +40,14 @@ set shiftwidth=2
 set smarttab
 set expandtab
 
-set guifont=Monaco:h14  " 設定字體樣式及大小。
+set guifont=Monaco:h14
 
-colorscheme molokai
+set statusline=%{GitBranchInfoString()}%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y
+highlight StatusLine term=bold,reverse cterm=bold,reverse
 
-set statusline=%{GitBranchInfoString()}%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y   "設定狀態列
-highlight StatusLine term=bold,reverse cterm=bold,reverse    "設定狀態列
-
-
-" 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
 
+filetype plugin indent on
 
 if(has("win32") || has("win95") || has("win64") || has("win16"))
   source $vim/vimrcs/tool-vimrc
@@ -69,12 +56,3 @@ elseif (has("unix") || has("macunix"))
   source ~/.vim/vimrcs/tool-vimrc
   source ~/.vim/vimrcs/map-vimrc
 endif
-
-
- " Required:
- filetype plugin indent on
-
- " If there are uninstalled bundles found on startup,
- " this will conveniently prompt you to install them.
- NeoBundleCheck
-
