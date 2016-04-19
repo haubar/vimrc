@@ -1,16 +1,15 @@
-
-"---------php.vim-------------------------
-"let g:php_syntax_extensions_enabled
-
-"---------vim-json------------------------
-"let g:indentLine_noConcealCursor=""
-
-"---------neocomplcache.vim---------------
-let g:neocomplcache_enable_at_startup = 1
-
 "---------NERDTreeTabs setting-----------------
 let g:nerdtree_tabs_open_on_console_startup=1
 nnoremap <F1> :NERDTreeTabsToggle<CR>
+
+"----------------syntastic-------------------
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"---------neocomplcache.vim---------------
+let g:neocomplcache_enable_at_startup = 1
 
 "---------neosnippet.vim------------------
 " Enable snipMate compatibility feature.
@@ -18,30 +17,16 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet'
 
-"----------vim-indent-guides--------------
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_enable_on_vim_startup = 1
-hi IndentGuidesOdd  guibg=red   ctermbg=236
-hi IndentGuidesEven guibg=green ctermbg=236
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 "-------------indent line-------------------
 let g:indentLine_color_term = 239
 let g:indentLine_char = '｜'
 nnoremap <F4> :IndentLinesToggle<CR>
+
 "--------------better white-----------------
 nnoremap <F2> :CurrentLineWhitespaceOn<CR>
 nnoremap <F3> :StripWhitespace<CR>
 nnoremap <F5> :ToggleWhitespace<CR>
-
-"----------------syntastic-------------------
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 "--------------vim foldfocus-----------------
 nmap <C-a> :call FoldFocus('e')<CR>
