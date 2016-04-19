@@ -14,11 +14,20 @@ NeoBundle 'tomasr/molokai'
 
 call neobundle#end()
 
+if(has("win32") || has("win95") || has("win64") || has("win16"))
+  source $vim/vimrcs/tool-vimrc
+  source $vim/vimrcs/map-vimrc
+elseif (has("unix") || has("macunix"))
+  source ~/.vim/vimrcs/tool-vimrc
+  source ~/.vim/vimrcs/map-vimrc
+endif
 
 "Base Setting
 set nobackup
 set nocompatible
 set encoding=utf-8
+set fileencodings=utf-8
+set termencoding=utf-8
 
 "View Setting
 syntax on
@@ -34,6 +43,7 @@ set ruler
 set paste
 set mouse=a
 set hlsearch
+set incsearch
 set smartindent
 set history=50
 set showcmd
@@ -45,8 +55,7 @@ set shiftwidth=2
 set smarttab
 set expandtab
 
-"set guifont=Monaco:h14  " 設定字體樣式及大小。
-set guifont=Cousine:h14  " 設定字體樣式及大小。
+set guifont=Monaco:h14  " 設定字體樣式及大小。
 
 colorscheme molokai
 
@@ -54,21 +63,15 @@ let g:molokai_original = 1
 
 set statusline=laststatus
 set laststatus=2
+set guifont=Inconsolata\ for\ Powerline:h14
 
-set rtp+=/Users/haubar/Library/Python/2.7/lib/python/site-packages/bindings/vim
 
 " 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
 
 "------------------------------------
 
-if(has("win32") || has("win95") || has("win64") || has("win16"))
-  source $vim/vimrcs/tool-vimrc
-  source $vim/vimrcs/map-vimrc
-elseif (has("unix") || has("macunix"))
-  source ~/.vim/vimrcs/tool-vimrc
-  source ~/.vim/vimrcs/map-vimrc
-endif
+
 
 
 filetype plugin indent on
