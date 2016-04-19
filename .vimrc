@@ -63,7 +63,7 @@ let g:molokai_original = 1
 
 set statusline=laststatus
 set laststatus=2
-set guifont=Inconsolata:h14
+set guifont=*
 
 
 " 存檔時移除多的空白區塊
