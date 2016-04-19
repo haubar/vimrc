@@ -54,6 +54,8 @@ set guifont=Monaco:h14  " 設定字體樣式及大小。
 
 colorscheme molokai
 
+set statusline=laststatus
+set laststatus=2
 
 " 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
