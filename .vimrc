@@ -17,7 +17,7 @@ NeoBundle 'tomasr/molokai'
 
 call neobundle#end()
 
-let g:molokai_original = 1
+"let g:molokai_original = 1
 
 
 "Base Setting
@@ -41,8 +41,8 @@ set mouse=a
 set hlsearch
 set smartindent
 set history=50
-set showcmd
-set showmatch
+"set showcmd
+"set showmatch
 set cmdheight=2
 set backspace=2
 set tabstop=2
