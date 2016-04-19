@@ -24,7 +24,7 @@ endif
 
 "Base Setting
 set nobackup
-set nocompatible
+"set nocompatible
 set encoding=utf-8
 set fileencodings=utf-8
 set termencoding=utf-8
