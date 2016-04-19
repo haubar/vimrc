@@ -33,7 +33,7 @@ set wrap
 set ruler
 set paste
 set mouse=a
-set  vim
+set hlsearch
 set smartindent
 set history=50
 set showcmd
