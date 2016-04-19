@@ -57,14 +57,10 @@ colorscheme molokai
 set statusline=%{GitBranchInfoString()}%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y   "設定狀態列
 highlight StatusLine term=bold,reverse cterm=bold,reverse    "設定狀態列
 
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
 
 " 存檔時移除多的空白區塊
 autocmd BufWritePre * :%s/\s\+$//e
 
-"------------------------------------
 
 if(has("win32") || has("win95") || has("win64") || has("win16"))
   source $vim/vimrcs/tool-vimrc
@@ -82,14 +78,3 @@ endif
  " this will conveniently prompt you to install them.
  NeoBundleCheck
 
-
-"php.vim highlight setting
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
