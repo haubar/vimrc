@@ -1,6 +1,8 @@
 "Language Syntax
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'arnaud-lb/vim-php-namespace'
+
+"Scheme
+NeoBundle 'tomasr/molokai'
 
 "Complection
 NeoBundle 'Shougo/neocomplcache'

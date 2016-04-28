@@ -9,8 +9,17 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"Scheme
-NeoBundle 'tomasr/molokai'
+NeoBundle 'Shougo/vimproc.vim', {
+ \ 'build' : {
+ \    'windows' : 'tools\\update-dll-mingw',
+ \    'cygwin' : 'make -f make_cygwin.mak',
+ \    'mac' : 'make -f make_mac.mak',
+ \    'linux' : 'make',
+ \    'unix' : 'gmake',
+ \   }
+ \ }
+
+
 
 call neobundle#end()
 
