@@ -37,6 +37,9 @@ set nobackup
 set encoding=utf-8
 set fileencodings=utf-8
 set termencoding=utf-8
+set fenc=chinese
+set langmenu=zh_TW.UTF-8
+language messages zh_TW.utf-8
 
 "View Setting
 syntax on
