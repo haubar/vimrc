@@ -5,7 +5,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tomasr/molokai'
 
 "Complection
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete.vim.git'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 
