@@ -63,7 +63,7 @@ set tabstop=2
 set shiftwidth=2
 set smarttab
 set expandtab
-set shortmess
+set shortmess=filnxtToO
 
 
 colorscheme molokai
