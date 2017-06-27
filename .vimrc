@@ -69,8 +69,7 @@ set shortmess=filnxtToO
 colorscheme molokai
 let g:molokai_original = 1
 
-"set guifont=Monaco:h14  " 設定字體樣式及大小。
-set guifont=Monospace:h16  " 設定字體樣式及大小。
+set guifont=Monaco:h14  " 設定字體樣式及大小。
 set statusline=laststatus
 set laststatus=2
 
